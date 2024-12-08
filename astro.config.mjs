@@ -5,39 +5,11 @@ import partytown from '@astrojs/partytown';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://omckeon.github.io/',
   integrations: [
-    partytown({
-      config: {
-        forward: ["dataLayer.push", "gtag"], // Forward both for compatibility
-      },
-    }),
     starlight({
       title: "Thoth Tech",
       favicon: "/favicon.svg",
-      head: [
-        // Google Analytics script tag
-        {
-          tag: "script",
-          attrs: {
-            type: "text/partytown",
-            src: 'https://www.googletagmanager.com/gtag/js?id=G-D62C4YT9KZ',
-            async: true,
-          },
-        },
-        // Google Analytics inline configuration
-        {
-          tag: "script",
-          attrs: {
-            type: "text/partytown",
-          },
-          content: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-D62C4YT9KZ');
-            `,
-        },
-      ],
       plugins: [
         starlightLinksValidator({
           errorOnRelativeLinks: true,
