@@ -6,6 +6,7 @@ import partytown from '@astrojs/partytown';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://omckeon.github.io/',
+  // base: 'my-repo',
   integrations: [
     starlight({
       title: "Thoth Tech",
