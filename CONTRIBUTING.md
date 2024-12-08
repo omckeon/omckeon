@@ -1,4 +1,4 @@
-# Contributing
+# Contributing (Testing change)
 
 You can help to improve the Thoth Tech documentation by sending pull requests to this repository.
 Thank you for your interest and help!
